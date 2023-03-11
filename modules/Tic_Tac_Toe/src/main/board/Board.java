@@ -2,8 +2,6 @@ package main.board;
 
 import main.tic_tac_toe_data.Variables;
 
-import java.lang.reflect.Array;
-
 public class Board {
     char board[][];
     int defaultBoardSize = 3;
@@ -17,7 +15,7 @@ public class Board {
         initializeBoard(SquareBoardSize);
     }
     public Board(int BoardSizeX, int BoardSizeY) {
-        initializeBoard(BoardSizeX, BoardSizeY);
+        initializeBoard(BoardSizeY, BoardSizeX);
     }
 
 
@@ -26,6 +24,23 @@ public class Board {
     }
     private void initializeBoard(int BoardSizeX, int BoardSizeY) {
         board = new char[BoardSizeX][BoardSizeY];
+    }
+
+    public void fillBoardWith(char signOfEmptyField) {
+        for (int i = 0; i < board.length; i++)
+            for (int j = 0; j < board[i].length; j++)
+                this.board[i][j] = signOfEmptyField;
+    }
+
+    public void printBoard() {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                System.out.print(board[i][j]);
+                if (j != board[i].length - 1)
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
     }
 
 

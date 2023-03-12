@@ -1,35 +1,19 @@
 package main.board;
 
-import main.tic_tac_toe_data.Variables;
-
 public class Board {
-    char board[][];
-    int defaultBoardSize = 3;
-    char signOfEmptyField = '-';
+    char[][] board;
 
-
-    public Board() {
-        initializeBoard(defaultBoardSize);
-    }
-    public Board(int SquareBoardSize) {
-        initializeBoard(SquareBoardSize);
-    }
-    public Board(int BoardSizeX, int BoardSizeY) {
-        initializeBoard(BoardSizeY, BoardSizeX);
-    }
-
-
-    private void initializeBoard(int SquareBoardSize) {
-        board = new char[SquareBoardSize][SquareBoardSize];
-    }
-    private void initializeBoard(int BoardSizeX, int BoardSizeY) {
-        board = new char[BoardSizeX][BoardSizeY];
-    }
+    public void setBoard(int SizeX, int SizeY) { this.board = new char[SizeY][SizeX]; }
+    public char[][] getBoard() { return board; }
 
     public void fillBoardWith(char signOfEmptyField) {
         for (int i = 0; i < board.length; i++)
             for (int j = 0; j < board[i].length; j++)
                 this.board[i][j] = signOfEmptyField;
+    }
+
+    public void fillBoardWithDefaultSigns() {
+        fillBoardWith('-');
     }
 
     public void printBoard() {
@@ -43,6 +27,6 @@ public class Board {
         }
     }
 
-
-    public char[][] getBoard() { return board; }
+    public void changeField (int coordX, int coordY, char newChar) {
+    }
 }

@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Board board = new Board();
         board.setBoard(5,4);
-        board.fillBoardWith('-');
+//        board.fillBoardWith('-');
         board.printBoard();
         System.out.println("bla");
 

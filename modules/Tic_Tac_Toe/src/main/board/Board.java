@@ -3,7 +3,9 @@ package main.board;
 public class Board {
     char[][] board;
 
-    public void setBoard(int SizeX, int SizeY) { this.board = new char[SizeY][SizeX]; }
+    public void setBoard(int SizeX, int SizeY) {
+        this.board = new char[SizeY][SizeX];
+    }
     public char[][] getBoard() { return board; }
 
     public void fillBoardWith(char signOfEmptyField) {

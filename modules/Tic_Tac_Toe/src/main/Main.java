@@ -11,7 +11,7 @@ public class Main {
         board.setBoard(5,4);
         board.fillBoardWith('-');
         board.printBoard();
-//        System.out.println("bla");
+        System.out.println("bla");
 
 /*        try {
             System.out.println("Naciśnij dowolny klawisz w ciągu 5 sekund:");

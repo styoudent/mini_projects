@@ -14,7 +14,7 @@ class CalculatorTest {
         assertEquals(8, calculator.add(3,5));
     }
     @Test
-      void TwoPlusTwoShouldEqualFour(){
+      void TwoPlusTwoShouldEqualFour() {
         Calculator calculator = new Calculator();
         assertEquals(4, calculator.add(2,2));
     }

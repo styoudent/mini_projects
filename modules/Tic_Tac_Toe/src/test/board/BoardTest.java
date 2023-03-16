@@ -35,14 +35,22 @@ class BoardTest {
         assert2DArrayIsFilledWith('-', board.getBoard());
     }
     @Test
-    void isBoardOfSizeX8AndY3FilledWithSpecificChar() {
+    void isBoardFilledWithSpecificChar() {
         board.fillBoardWith('$');
         assert2DArrayIsFilledWith('$', board.getBoard());
     }
     @Test
-    void isXYBoardOfSizeX5AndY2Printed() {
+    void isEmptyBoardPrinted() {
+        String expectedOutput = "\u0000  \u0000  \u0000  \u0000  \u0000\r\n" +
+                "\u0000  \u0000  \u0000  \u0000  \u0000\r\n";
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        board.printBoard();
+        assertEquals(expectedOutput, outContent.toString());
+    }
+    @Test
+    void isFilledBoardPrinted() {
         String expectedOutput = "-  -  -  -  -\r\n-  -  -  -  -\r\n";
-        board.setBoard(5,2);
         board.fillBoardWithDefaultSigns();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));

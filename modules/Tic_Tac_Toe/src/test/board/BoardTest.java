@@ -51,6 +51,7 @@ class BoardTest {
     @Test
     void isFilledBoardPrinted() {
         String expectedOutput = "-  -  -  -  -\r\n-  -  -  -  -\r\n";
+    void isXYBoardOfSizeX5AndY2Printed() {
         board.fillBoardWithDefaultSigns();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));

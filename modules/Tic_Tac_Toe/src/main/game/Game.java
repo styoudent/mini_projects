@@ -1,4 +1,5 @@
 package main.game;
+
 import java.util.Scanner;
 
 public class Game {

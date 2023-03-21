@@ -7,7 +7,7 @@ public class Board {
         this.board = new char[SizeY][SizeX];
     }
     public char[][] getBoard() { return board; }
-
+//mk
     public void fillBoardWith(char signOfEmptyField) {
         for (int i = 0; i < board.length; i++)
             for (int j = 0; j < board[i].length; j++)

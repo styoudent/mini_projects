@@ -14,6 +14,7 @@ import static test.custom_asserts.ArrayAsserts.assert2DArrayIsFilledWith;
 
 class BoardTest {
     private Board board;
+    String newLine = System.lineSeparator();
 
     @BeforeEach
     void setUpForTests(){
@@ -41,8 +42,8 @@ class BoardTest {
     }
     @Test
     void isEmptyBoardPrinted() {
-        String expectedOutput = "\u0000  \u0000  \u0000  \u0000  \u0000\r\n" +
-                "\u0000  \u0000  \u0000  \u0000  \u0000\r\n";
+        String expectedOutput = "\u0000  \u0000  \u0000  \u0000  \u0000" + newLine
+                + "\u0000  \u0000  \u0000  \u0000  \u0000" + newLine;
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
         board.printBoard();
@@ -50,8 +51,8 @@ class BoardTest {
     }
     @Test
     void isFilledBoardPrinted() {
-        String expectedOutput = "-  -  -  -  -\r\n-  -  -  -  -\r\n";
-    void isXYBoardOfSizeX5AndY2Printed() {
+        String expectedOutput = "-  -  -  -  -" + newLine
+                + "-  -  -  -  -" + newLine;
         board.fillBoardWithDefaultSigns();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
